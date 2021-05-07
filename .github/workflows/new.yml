@@ -21,16 +21,17 @@ jobs:
 
       - name: Git it
         run: |
-          mkdir www
-          cd www
           wget https://raw.githubusercontent.com/PHProxy/phproxy/master/edit.php
           wget https://raw.githubusercontent.com/PHProxy/phproxy/master/index.php
-          cd ../
           git clone https://github.com/open-dingtalk/pierced.git
 
       - name: Use php
         run: |
-          curl -s https://install.zerotier.com | sudo bash
-          zerotier-cli join ${{ secrets.ID }}
-          cd www
-          php -S localhost:80
+          screen -S php
+          php -S localhost:2000
+
+      - name: Ding Talk
+        run: |
+          cd pierced/linux
+          ./ding -config=./ding.cfg -subdomain=kingye 2000
+          
