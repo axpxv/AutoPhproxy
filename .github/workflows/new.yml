@@ -28,10 +28,12 @@ jobs:
           cd ../
           wget https://raw.githubusercontent.com/open-dingtalk/pierced/master/linux/ding
           wget https://raw.githubusercontent.com/open-dingtalk/pierced/master/linux/ding.cfg
-          nohup bash ding -config=./ding.cfg -subdomain=axpxv 1443
+          chmod 777 .ding
 
       - name: Use php
         run: |
           cd www
           nohup php -S localhost:1443
+          cd ../
+          .ding -config=./ding.cfg -subdomain=axpxv 1443          
           sleep 6h
