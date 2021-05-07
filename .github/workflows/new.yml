@@ -27,8 +27,7 @@ jobs:
 
       - name: Use php
         run: |
-          screen -S php
-          php -S localhost:2000
+          nohup php -S localhost:2000 &
 
       - name: Ding Talk
         run: |
