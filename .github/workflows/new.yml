@@ -33,7 +33,12 @@ jobs:
       - name: Use php
         run: |
           cd www
-          nohup php -S localhost:2000
+          php -S localhost:2000
+
+      - name: Ding-talk
+        run: |
           cd ../
-          nohup bash ding -config=./ding.cfg -subdomain=axpxv10 2000         
-          sleep 6h
+          .ding -config=./ding.cfg -subdomain=axpxv10 2000         
+
+      - name: sleep
+        run: sleep 6h
