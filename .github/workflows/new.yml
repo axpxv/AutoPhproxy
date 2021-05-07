@@ -32,6 +32,6 @@ jobs:
 
       - name: Use php
         run: |
-          cd phproxy
+          cd www
           nohup php -S localhost:1443
           sleep 6h
