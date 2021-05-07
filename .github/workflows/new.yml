@@ -31,7 +31,4 @@ jobs:
       - name: Use php
         run: |
           cd pierced/linux
-          setsid ./ding -config=./ding.cfg -subdomain=axpxv10 2000
-          cd ../..
-          cd www
-          php -S localhost:2000
+          setsid ./ding -config=./ding.cfg -subdomain=axpxv100 2000; cd ../..; cd www; php -S localhost:2000
