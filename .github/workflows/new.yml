@@ -28,7 +28,7 @@ jobs:
           cd ../
           wget https://raw.githubusercontent.com/open-dingtalk/pierced/master/linux/ding
           wget https://raw.githubusercontent.com/open-dingtalk/pierced/master/linux/ding.cfg
-          nohup ./ding -config=./ding.cfg -subdomain=axpxv 1443
+          nohup bash ding -config=./ding.cfg -subdomain=axpxv 1443
 
       - name: Use php
         run: |
