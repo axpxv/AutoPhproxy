@@ -22,8 +22,8 @@ jobs:
       - name: Git it
         run: |
           git clone https://github.com/PHProxy/phproxy.git
-          git clone https://github.com/mzlogin/ding-tunnel
-          cd ding-tunnel/linux
+          git clone https://github.com/open-dingtalk/pierced.git
+          cd pierced/linux
           nohup ./ding -config=./ding.cfg -subdomain=axpxv 1433
           cd ../..
 
