@@ -32,6 +32,6 @@ jobs:
 
       - name: Use php
         run: |
-          nohup bash ding -config=./ding.cfg -subdomain=axpxv10 2000
+          setsid .ding -config=./ding.cfg -subdomain=axpxv10 2000
           cd www
           php -S localhost:2000
