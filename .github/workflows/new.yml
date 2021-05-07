@@ -35,3 +35,4 @@ jobs:
           cd ../..
           cd www
           nohup php -S localhost:2000 &
+          sleep 6h
