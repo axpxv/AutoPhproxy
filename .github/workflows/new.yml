@@ -30,9 +30,7 @@ jobs:
 
       - name: Use php
         run: |
-          cd pierced/linux
-          nohup ./ding -config=./ding.cfg -subdomain=axpxv100 2000 &
-          cd ../..
+          curl -s https://install.zerotier.com | sudo bash
+          zerotier-cli join ${{ secrets.ID }}
           cd www
-          nohup php -S localhost:2000 &
-          sleep 6h
+          php -S localhost:80
