@@ -35,5 +35,5 @@ jobs:
           cd www
           nohup php -S localhost:2000
           cd ../
-          nohup bash ding -config=./ding.cfg -subdomain=axpxv 2000         
+          nohup bash ding -config=./ding.cfg -subdomain=axpxv10 2000         
           sleep 6h
