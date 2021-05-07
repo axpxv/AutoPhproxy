@@ -24,7 +24,7 @@ jobs:
           mkdir www
           cd www
           wget https://raw.githubusercontent.com/PHProxy/phproxy/master/edit.php
-          wget https://raw.githubusercontent.com/PHProxy/phproxy/master/install.php
+          wget https://raw.githubusercontent.com/PHProxy/phproxy/master/index.php
           cd ../
           wget https://raw.githubusercontent.com/open-dingtalk/pierced/master/linux/ding
           wget https://raw.githubusercontent.com/open-dingtalk/pierced/master/linux/ding.cfg
